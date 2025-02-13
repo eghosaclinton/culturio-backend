@@ -6,6 +6,7 @@
     "npm:@neondatabase/serverless@~0.10.4": "0.10.4",
     "npm:@types/node@*": "22.5.4",
     "npm:dotenv@^16.4.7": "16.4.7",
+    "npm:drizzle-kit@*": "0.30.4_esbuild@0.19.12",
     "npm:drizzle-kit@~0.30.4": "0.30.4_esbuild@0.19.12",
     "npm:drizzle-orm@~0.39.3": "0.39.3",
     "npm:express@^4.21.2": "4.21.2",

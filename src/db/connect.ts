@@ -1,5 +1,5 @@
 import { neon } from '@neondatabase/serverless'
-import process from 'npm:process'
+import process from 'node:process'
 import { drizzle } from 'drizzle-orm/neon-http'
 import * as dotenv from 'dotenv'
 import * as schema from './schema.ts'

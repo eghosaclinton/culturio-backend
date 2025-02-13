@@ -1,6 +1,9 @@
-import 'dotenv/config'
-import process from 'npm:process'
+// import 'dotenv/config'
+import process from 'node:process'
 import { defineConfig } from 'drizzle-kit'
+import * as dotenv from "dotenv";
+dotenv.config();
+
 
 export default defineConfig({
     out: './drizzle',
@@ -9,4 +12,6 @@ export default defineConfig({
     dbCredentials: {
         url: process.env.DATABASE_URL!,
     },
+    verbose: true,
+    strict: true,
 })
