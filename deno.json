@@ -2,8 +2,8 @@
   "tasks": {
     "dev": "deno run --watch --allow-read --allow-net --allow-env src/main.ts",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,md}\"", 
-    "db:generate": "deno run --allow-read --allow-write --allow-net --allow-env npm:drizzle-kit generate:pg",
-    "db:migrate": "deno run --allow-read --allow-write --allow-net --allow-env npm:drizzle-kit migrate",
+    "db:generate": "deno run --node-modules-dir --allow-env --allow-read --allow-sys --allow-write --allow-run npm:drizzle-kit generate",
+    "db:migrate": "deno run --node-modules-dir --allow-env --allow-read --allow-sys --allow-write --allow-run npm:drizzle-kit migrate",
     "db:update": "deno task db:generate && deno task db:migrate"
 
   },
@@ -11,6 +11,7 @@
     "@neondatabase/serverless": "npm:@neondatabase/serverless@^0.10.4",
 
     "@std/assert": "jsr:@std/assert@1",
+    "@types/express": "npm:@types/express@^5.0.0",
     "@types/pg": "npm:@types/pg@^8.11.11",
     "dotenv": "npm:dotenv@^16.4.7",
     "drizzle-kit": "npm:drizzle-kit@^0.30.4",
