@@ -1,21 +1,20 @@
-import { exhibitsTable, visitorsTable } from "../db/schema.ts";
-import { sql } from "drizzle-orm";
-import {db} from "../db/connect.ts"
+import { exhibitsTable, visitorsTable } from '../db/schema.ts'
+import { sql } from 'drizzle-orm'
+import { db } from '../db/connect.ts'
 
-
-export const recordVisit = async (exhibitId: string) => {
+export const recordVisit = async (exhibitId: string, visitorId: string) => {
     return await db.transaction(async (tx) => {
-        // Add visitor record
+      
         await tx.insert(visitorsTable).values({
-            exhibit_id: exhibitId
-        });
-
-        // Increment visitor count
+            visitor_id: visitorId,
+            exhibit_id: exhibitId,
+        })
+             
         await tx
             .update(exhibitsTable)
             .set({
-                visitor_count: sql`${exhibitsTable.visitor_count} + 1`
+                visitor_count: sql`${exhibitsTable.visitor_count} + 1`,
             })
-            .where(sql`${exhibitsTable.id} = ${exhibitId}`);
-    });
-};
+            .where(sql`${exhibitsTable.id} = ${exhibitId}`)
+    })
+}
