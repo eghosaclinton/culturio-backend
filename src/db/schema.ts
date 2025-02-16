@@ -4,6 +4,7 @@ export const exhibitsTable = pgTable('exhibits', {
     id: uuid('id').primaryKey().defaultRandom(),
     title: varchar('title', { length: 255 }).notNull(),
     description: varchar('description', { length: 500 }).notNull(),
+    source: varchar('source', { length: 255 }).notNull(),
     media_url: varchar('media_url', { length: 255 }).notNull(),
     visitor_count: integer('visitor_count').notNull().default(0),
 })
