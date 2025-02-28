@@ -1,3 +1,19 @@
+# Environment variables
 .env
 
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Scrapy cache and logs
+.scrapy/
+logs/
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# node modules
 node_modules

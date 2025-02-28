@@ -9,7 +9,7 @@
     "npm:@types/pg@^8.11.11": "8.11.11",
     "npm:bcrypt@5.1.1": "5.1.1",
     "npm:cookie-parser@^1.4.7": "1.4.7",
-    "npm:dotenv@^16.4.7": "16.4.7",
+    "npm:cors@^2.8.5": "2.8.5",
     "npm:drizzle-kit@*": "0.30.4_esbuild@0.19.12",
     "npm:drizzle-kit@0.30.4": "0.30.4_esbuild@0.19.12",
     "npm:drizzle-kit@~0.30.4": "0.30.4_esbuild@0.19.12",
@@ -469,6 +469,13 @@
     "cookie@0.7.2": {
       "integrity": "sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w=="
     },
+    "cors@2.8.5": {
+      "integrity": "sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==",
+      "dependencies": [
+        "object-assign",
+        "vary"
+      ]
+    },
     "cssom@0.2.5": {
       "integrity": "sha512-b9ecqKEfWrNcyzx5+1nmcfi80fPp8dVM8rlAh7fFK14PZbNjp++gRjyZTZfLJQa/Lw0qeCJho7WBIl0nw0v6HA=="
     },
@@ -495,9 +502,6 @@
     },
     "detect-libc@2.0.3": {
       "integrity": "sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw=="
-    },
-    "dotenv@16.4.7": {
-      "integrity": "sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ=="
     },
     "drizzle-kit@0.30.4_esbuild@0.19.12": {
       "integrity": "sha512-B2oJN5UkvwwNHscPWXDG5KqAixu7AUzZ3qbe++KU9SsQ+cZWR4DXEPYcvWplyFAno0dhRJECNEhNxiDmFaPGyQ==",
@@ -1323,7 +1327,7 @@
       "npm:@types/pg@^8.11.11",
       "npm:bcrypt@5.1.1",
       "npm:cookie-parser@^1.4.7",
-      "npm:dotenv@^16.4.7",
+      "npm:cors@^2.8.5",
       "npm:drizzle-kit@~0.30.4",
       "npm:drizzle-orm@~0.39.3",
       "npm:express@^4.21.2",

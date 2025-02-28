@@ -1,19 +1,34 @@
 import express, { type Request, type Response } from 'express'
-import {db} from "./db/connect.ts"
-import { exhibits } from "./utils/placeholder.ts"
-import { exhibitsTable } from "./db/schema.ts"
+import redis from "redis"
+import cors from "cors"
 import cookieParser from "cookie-parser"
 import exhibitRouter from './routes/exhibits.ts'
 
 const app = express()
-const port = 3000
+const port = 3001
+
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: ['GET'],
+    credentials: true
+}))
+
+// const client = redis.createClient()
+
+// client.on('error', (err)=>{
+//     console.error('Redis Error: ' + err)
+// })
+
+
 
 app.use(express.json())
 app.use(cookieParser())
 
 app.post('/', (_req: Request, res: Response) => {
     console.log('someone sent a request')
-    res.send('Hello, world!')
+    res.json({
+       message : 'Hello, world!'
+    })
 })
 
 // app.get('/seed', async (_req: Request, res:Response)=>{

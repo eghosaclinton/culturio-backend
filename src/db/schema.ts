@@ -15,4 +15,5 @@ export const visitorsTable = pgTable('visitors', {
     exhibit_id: uuid('exhibit_id')
         .notNull()
         .references(() => exhibitsTable.id),
+        
 })

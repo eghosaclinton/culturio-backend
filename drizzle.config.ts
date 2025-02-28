@@ -1,8 +1,4 @@
-// import 'dotenv/config'
-// import process from 'node:process'
 import { defineConfig } from 'drizzle-kit'
-// import * as dotenv from "dotenv";
-// dotenv.config();
 
 export default defineConfig({
     out: './drizzle',
