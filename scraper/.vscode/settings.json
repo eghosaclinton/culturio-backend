@@ -1,6 +1,0 @@
-{
-    "python.pythonPath": ".venv/bin/python", // Path to your virtual environment's Python
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true
-  
-}
