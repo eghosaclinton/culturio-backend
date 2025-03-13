@@ -1,4 +1,5 @@
 import { defineConfig } from 'drizzle-kit'
+import "jsr:@std/dotenv/load";
 
 export default defineConfig({
     out: './drizzle',

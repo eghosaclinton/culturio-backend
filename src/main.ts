@@ -1,5 +1,4 @@
 import express, { type Request, type Response } from 'express'
-import redis from "redis"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import exhibitRouter from './routes/exhibits.ts'
@@ -8,12 +7,16 @@ const app = express()
 const port = 3001
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:1420',
     methods: ['GET'],
     credentials: true
 }))
 
-// const client = redis.createClient()
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: ['GET'],
+    credentials: true
+}))
 
 // client.on('error', (err)=>{
 //     console.error('Redis Error: ' + err)
@@ -24,8 +27,8 @@ app.use(cors({
 app.use(express.json())
 app.use(cookieParser())
 
-app.post('/', (_req: Request, res: Response) => {
-    console.log('someone sent a request')
+app.get('/', (_req: Request, res: Response) => {
+    console.log("connected!")
     res.json({
        message : 'Hello, world!'
     })
